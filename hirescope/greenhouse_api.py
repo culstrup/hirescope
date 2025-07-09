@@ -81,7 +81,7 @@ class GreenhouseClient:
         
     def get_applications(self, job_id: int, limit: Optional[int] = None) -> List[Dict]:
         """Get all applications for a job"""
-        applications = []
+        applications: List[Dict] = []
         page = 1
         
         while True:
