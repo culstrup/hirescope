@@ -10,7 +10,7 @@ from typing import Dict, List, Optional, Tuple
 from greenhouse_api import GreenhouseClient
 from document_processor import DocumentProcessor
 from ai_scorer import AIScorer
-from report_generator import ReportGenerator
+from report_generator_v2 import ReportGeneratorV2
 
 
 class CandidateAnalyzer:
@@ -20,7 +20,7 @@ class CandidateAnalyzer:
         self.greenhouse = GreenhouseClient(greenhouse_key)
         self.doc_processor = DocumentProcessor()
         self.ai_scorer = AIScorer(openai_key)
-        self.report_gen = ReportGenerator()
+        self.report_gen = ReportGeneratorV2()
         self.job_desc_cache = {}
         
     def analyze_job(self, job_id: int, company_context: str = "", 
