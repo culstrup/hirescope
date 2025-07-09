@@ -7,10 +7,10 @@ import json
 import time
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
-from .greenhouse_api import GreenhouseClient
-from .document_processor import DocumentProcessor
-from .ai_scorer import AIScorer
-from .report_generator import ReportGenerator
+from greenhouse_api import GreenhouseClient
+from document_processor import DocumentProcessor
+from ai_scorer import AIScorer
+from report_generator import ReportGenerator
 
 
 class CandidateAnalyzer:
