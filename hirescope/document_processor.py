@@ -5,7 +5,7 @@ Handles PDF, DOCX, TXT, and other formats
 
 import io
 import re
-from typing import Optional, List
+from typing import List
 
 try:
     import PyPDF2
@@ -21,7 +21,7 @@ except ImportError:
 class DocumentProcessor:
     """Processes various document formats to extract text"""
     
-    def __init__(self):
+    def __init__(self) -> None:
         self.supported_formats = self._check_supported_formats()
         
     def _check_supported_formats(self) -> List[str]:

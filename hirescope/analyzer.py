@@ -7,10 +7,10 @@ import json
 import time
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
-from greenhouse_api import GreenhouseClient
-from document_processor import DocumentProcessor
-from ai_scorer import AIScorer
-from report_generator_v2 import ReportGeneratorV2
+from hirescope.greenhouse_api import GreenhouseClient
+from hirescope.document_processor import DocumentProcessor
+from hirescope.ai_scorer import AIScorer
+from hirescope.report_generator_v2 import ReportGeneratorV2
 
 
 class CandidateAnalyzer:

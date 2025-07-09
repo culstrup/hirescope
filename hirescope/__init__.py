@@ -9,7 +9,7 @@ Licensed under MIT License
 
 __version__ = "1.0.0"
 __author__ = "GSD at Work LLC"
-__email__ = "contact@gsdat.work"
+__email__ = "christian@gsdat.work"
 
 # Import all modules when package is imported
 from .analyzer import CandidateAnalyzer
