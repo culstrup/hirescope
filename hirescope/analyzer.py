@@ -6,7 +6,7 @@ Analyzes candidates from Greenhouse against job requirements using OpenAI
 import json
 import time
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from hirescope.greenhouse_api import GreenhouseClient
 from hirescope.document_processor import DocumentProcessor
 from hirescope.ai_scorer import AIScorer
@@ -194,7 +194,7 @@ class CandidateAnalyzer:
         """Process all candidate attachments"""
         print(f"   📄 Processing attachments...")
         
-        attachments_data = {
+        attachments_data: Dict[str, Any] = {
             'resume_text': '',
             'cover_letter_text': '',
             'other_attachments': []
