@@ -1,0 +1,63 @@
+{
+  "123456": [
+    {
+      "id": 111111,
+      "first_name": "John",
+      "last_name": "Doe",
+      "email_addresses": [{"value": "john.doe@example.com"}],
+      "applications": [
+        {
+          "id": 222222,
+          "status": "active",
+          "stage": "phone_screen",
+          "applied_at": "2025-01-10T10:00:00Z",
+          "answers": [
+            {
+              "question": "Years of experience?",
+              "answer": "8 years in software development"
+            }
+          ],
+          "attachments": [
+            {
+              "filename": "john_doe_resume.pdf",
+              "type": "resume",
+              "url": "https://example.com/attachments/resume1.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 333333,
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email_addresses": [{"value": "jane.smith@example.com"}],
+      "applications": [
+        {
+          "id": 444444,
+          "status": "rejected",
+          "stage": "application_review",
+          "applied_at": "2025-01-08T14:30:00Z",
+          "answers": [
+            {
+              "question": "Years of experience?",
+              "answer": "12 years in enterprise software"
+            }
+          ],
+          "attachments": [
+            {
+              "filename": "jane_smith_cv.docx",
+              "type": "resume",
+              "url": "https://example.com/attachments/resume2.docx"
+            },
+            {
+              "filename": "cover_letter.pdf",
+              "type": "cover_letter",
+              "url": "https://example.com/attachments/cover1.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

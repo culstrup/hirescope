@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "id": 123456,
+      "name": "Senior Software Engineer",
+      "departments": [{"name": "Engineering"}],
+      "status": "open",
+      "created_at": "2025-01-01T00:00:00Z",
+      "notes": "",
+      "custom_fields": {
+        "employment_type": "Full-time",
+        "salary_range": "$150k - $200k"
+      }
+    },
+    {
+      "id": 789012,
+      "name": "Product Manager",
+      "departments": [{"name": "Product"}],
+      "status": "open",
+      "created_at": "2025-01-05T00:00:00Z",
+      "notes": "Looking for someone with B2B SaaS experience",
+      "custom_fields": {
+        "employment_type": "Full-time",
+        "salary_range": "$130k - $170k"
+      }
+    }
+  ]
+}
