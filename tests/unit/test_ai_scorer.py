@@ -185,7 +185,7 @@ Responsibilities:
         mock_urlopen.return_value = mock_response
 
         # Score with company context
-        result = scorer.score_candidate(
+        scorer.score_candidate(
             job_title="Senior Software Engineer",
             job_description=sample_job_description,
             candidate_profile=sample_candidate_profile,

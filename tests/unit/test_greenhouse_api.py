@@ -5,7 +5,7 @@ Unit tests for GreenhouseClient class
 import base64
 import json
 import urllib.error
-from unittest.mock import MagicMock, Mock, patch
+from unittest.mock import Mock, patch
 
 import pytest
 
@@ -34,7 +34,7 @@ class TestGreenhouseClient:
         assert client.api_key == "my_secret_key"
 
         # Check base64 encoding is correct
-        expected_creds = base64.b64encode("my_secret_key:".encode()).decode()
+        expected_creds = base64.b64encode(b"my_secret_key:").decode()
         assert client.credentials == expected_creds
 
         # Check base URL
