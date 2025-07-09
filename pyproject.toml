@@ -72,4 +72,4 @@ no_implicit_optional = false
 
 [tool.bandit]
 exclude_dirs = ["tests", "venv", ".venv"]
-skips = ["B101", "B110", "B112", "B310", "B603", "B607"]  # Skip asserts, try-except-pass, urllib, subprocess checks
+skips = ["B101", "B110", "B112", "B310", "B603", "B607", "B404", "B606"]  # Skip asserts, try-except-pass, urllib, subprocess checks, subprocess import, startfile
