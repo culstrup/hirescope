@@ -9,6 +9,14 @@
 
 In real-world testing across multiple roles, **20-40% of our top AI-recommended candidates were "hidden gems"** - previously rejected applicants who deserved a second look. Don't let great talent slip through the cracks.
 
+## 📋 Sample Output
+
+Want to see what HireScope produces? Check out our **[example output files](examples/)** to see real analysis results:
+
+- 📄 **[Full Analysis Report](examples/SAMPLE_REPORT_Senior_Software_Engineer.md)** - Complete markdown report showing AI evaluations, hidden gems, and recommendations
+- 📊 **[Top Candidates CSV](examples/SAMPLE_TOP_CANDIDATES_Senior_Software_Engineer.csv)** - Quick reference export for hiring managers
+- 💡 **Key Insight**: In our sample, the #1 highest-scoring candidate (92/100) had been rejected after phone screen!
+
 ## ✨ Features
 
 - **Comprehensive Analysis**: Evaluates ALL candidates, including rejected ones
