@@ -3,11 +3,10 @@ Shared pytest fixtures and configuration
 """
 
 import json
-import os
-import pytest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+import pytest
 
 # Get the path to the fixtures directory
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
@@ -22,30 +21,32 @@ def fixture_path():
 @pytest.fixture
 def load_fixture():
     """Factory fixture to load JSON fixtures"""
+
     def _load_fixture(filename):
         filepath = FIXTURES_DIR / filename
-        with open(filepath, 'r') as f:
+        with open(filepath) as f:
             return json.load(f)
+
     return _load_fixture
 
 
 @pytest.fixture
 def mock_greenhouse_client():
     """Mock GreenhouseClient for testing"""
-    with patch('hirescope.greenhouse_api.GreenhouseClient') as mock:
+    with patch("hirescope.greenhouse_api.GreenhouseClient") as mock:
         client = Mock()
-        
+
         # Load mock data
-        with open(FIXTURES_DIR / 'api_responses' / 'greenhouse_jobs.json') as f:
+        with open(FIXTURES_DIR / "api_responses" / "greenhouse_jobs.json") as f:
             jobs_data = json.load(f)
-        with open(FIXTURES_DIR / 'api_responses' / 'greenhouse_candidates.json') as f:
+        with open(FIXTURES_DIR / "api_responses" / "greenhouse_candidates.json") as f:
             candidates_data = json.load(f)
-        
+
         # Configure mock methods
-        client.get_jobs.return_value = jobs_data['jobs']
-        client.get_job.return_value = jobs_data['jobs'][0]
-        client.get_candidates.return_value = candidates_data['123456']
-        
+        client.get_jobs.return_value = jobs_data["jobs"]
+        client.get_job.return_value = jobs_data["jobs"][0]
+        client.get_candidates.return_value = candidates_data["123456"]
+
         mock.return_value = client
         yield client
 
@@ -53,19 +54,19 @@ def mock_greenhouse_client():
 @pytest.fixture
 def mock_openai_client():
     """Mock OpenAI client for testing"""
-    with patch('openai.OpenAI') as mock:
+    with patch("openai.OpenAI") as mock:
         client = Mock()
-        
+
         # Load mock responses
-        with open(FIXTURES_DIR / 'api_responses' / 'openai_scoring.json') as f:
+        with open(FIXTURES_DIR / "api_responses" / "openai_scoring.json") as f:
             responses = json.load(f)
-        
+
         # Configure mock to return different responses
         client.chat.completions.create.side_effect = [
             Mock(choices=[Mock(message=Mock(content=json.dumps(responses[0])))]),
             Mock(choices=[Mock(message=Mock(content=json.dumps(responses[1])))]),
         ]
-        
+
         mock.return_value = client
         yield client
 
@@ -141,9 +142,11 @@ John Doe
 @pytest.fixture
 def temp_env_vars(monkeypatch):
     """Temporarily set environment variables for testing"""
+
     def _set_env(**kwargs):
         for key, value in kwargs.items():
             monkeypatch.setenv(key, value)
+
     return _set_env
 
 
@@ -158,7 +161,7 @@ def reset_singleton_instances():
 @pytest.fixture
 def mock_requests_get():
     """Mock requests.get for testing URL fetching"""
-    with patch('requests.get') as mock:
+    with patch("requests.get") as mock:
         response = Mock()
         response.content = b"Mock file content"
         response.raise_for_status = Mock()
