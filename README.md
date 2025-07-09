@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![codecov](https://codecov.io/gh/culstrup/hirescope/graph/badge.svg?token=YOUR_TOKEN)](https://codecov.io/gh/culstrup/hirescope)
+[![codecov](https://codecov.io/gh/culstrup/hirescope/graph/badge.svg)](https://codecov.io/gh/culstrup/hirescope)
 
 **Analyze hundreds of job applications in minutes, not hours.** HireScope uses OpenAI's advanced reasoning models to evaluate every candidate in your Greenhouse ATS, helping recruiters focus their limited attention on the best fits.
 
