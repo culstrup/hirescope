@@ -63,12 +63,16 @@ source venv/bin/activate
 python hirescope.py
 ```
 
+![HireScope startup screen showing available jobs](screenshots/1_setup.png)
+
 The tool will:
 1. Connect to your Greenhouse account
 2. Show all jobs with applications
 3. Let you select a job to analyze
 4. Evaluate every candidate using AI
 5. Generate comprehensive reports with top candidates and hidden gems
+
+![HireScope analyzing candidates with progress indicators](screenshots/2_running.png)
 
 ## 📈 How It Works
 
@@ -92,6 +96,8 @@ HireScope generates three types of output:
 1. **Markdown Report** - Comprehensive analysis with direct Greenhouse links
 2. **CSV Summary** - Top candidates for easy sharing
 3. **JSON Data** - Complete results for further analysis
+
+![Sample HireScope report showing top candidates with AI scores and analysis](screenshots/3_report.png)
 
 ## 🔧 Configuration
 
