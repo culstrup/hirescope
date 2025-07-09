@@ -17,7 +17,7 @@ setup(
     name="hirescope",
     version="1.0.0",
     author="GSD at Work LLC",
-    author_email="contact@gsdat.work",
+    author_email="christian@gsdat.work",
     description="AI-powered candidate analysis for Greenhouse ATS",
     long_description=long_description,
     long_description_content_type="text/markdown",

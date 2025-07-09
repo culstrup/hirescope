@@ -34,6 +34,9 @@ ANALYSIS_*.md
 progress_*.json
 FINAL_*.json
 
+# Analysis results directory (from ReportGeneratorV2)
+analysis_results/
+
 # Logs
 *.log
 logs/
