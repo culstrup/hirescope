@@ -149,7 +149,7 @@ TOP 5 CANDIDATES:
             if platform.system() == 'Darwin':  # macOS
                 subprocess.run(['open', filepath], check=False)
             elif platform.system() == 'Windows':
-                os.startfile(filepath)
+                os.startfile(filepath)  # type: ignore[attr-defined]
             else:  # Linux
                 subprocess.run(['xdg-open', filepath], check=False)
         except:

@@ -21,7 +21,7 @@ class CandidateAnalyzer:
         self.doc_processor = DocumentProcessor()
         self.ai_scorer = AIScorer(openai_key)
         self.report_gen = ReportGeneratorV2()
-        self.job_desc_cache = {}
+        self.job_desc_cache: Dict[int, str] = {}
         
     def analyze_job(self, job_id: int, company_context: str = "", 
                    num_top_candidates: int = 10, save_progress: bool = True) -> Dict:
@@ -235,7 +235,7 @@ class CandidateAnalyzer:
         email = candidate.get('email_addresses', [{}])[0].get('value', 'N/A') if candidate.get('email_addresses') else 'N/A'
         
         # Process application answers
-        answers = []
+        answers: List[str] = []
         for answer in app.get('answers', []):
             question = answer.get('question', '')
             response = answer.get('answer', '')

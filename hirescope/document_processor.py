@@ -10,12 +10,12 @@ from typing import List
 try:
     import PyPDF2
 except ImportError:
-    PyPDF2 = None
+    PyPDF2 = None  # type: ignore[assignment]
     
 try:
     from docx import Document
 except ImportError:
-    Document = None
+    Document = None  # type: ignore[assignment]
 
 
 class DocumentProcessor:
