@@ -186,6 +186,3 @@ COMPANY_CONTEXT="Your company culture and values for better AI alignment"
 3. Check rate limits (429 errors are handled automatically)
 4. Review console output for specific error messages
 
-## Historical Context
-
-This project was originally created as "HireScope Candidate Analyzer" for internal use at HireScope, analyzing their historical candidate data. It was then generalized and open-sourced as HireScope, removing all company-specific references. The core value discovered during initial testing was that 20-40% of the highest-scoring candidates were found in the previously rejected pool, highlighting potential bias or oversights in manual screening processes.
